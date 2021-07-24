@@ -1,0 +1,79 @@
+<section class="main-container col1-layout">
+  <div class="main container">
+    <div class="col-main">
+      <div class="cart">
+        <!-- BEGIN CART COLLATERALS -->
+        <div class="cart-collaterals row">
+          <form action="/orders" method="POST" id="payment-form">
+            <div class="col-sm-4">
+              <div class="discount">
+                <h3>Address</h3>
+                <label for="address_payment">Enter your address.</label>
+                <input
+                  type="text"
+                  required="true"
+                  name="address_payment"
+                  id="address_payment"
+                  class="input-text fullwidth"
+                />
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="discount">
+                <h3>Payment detail</h3>
+                <label for="coupon_code"></label>
+                <div id="coupon_code"></div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="totals">
+                <h3>Payable Amount</h3>
+                <div class="inner">
+                  <table
+                    class="table shopping-cart-table-total"
+                    id="shopping-cart-totals-table"
+                  >
+                    <colgroup>
+                      <col />
+                      <col width="1" />
+                    </colgroup>
+                    <tfoot>
+                      <tr>
+                        <td colspan="1" class="a-left">
+                          <strong>Grand Total</strong>
+                        </td>
+                        <td class="a-right">
+                          <strong
+                            ><span class="price"
+                              >₹<%= session.cart ? session.cart.totalPrice :
+                              ""%></span
+                            ></strong
+                          >
+                        </td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                  <ul class="checkout">
+                    <li>
+                      <button
+                        class="button btn-proceed-checkout"
+                        title="Proceed to Checkout"
+                        type="submit"
+                      >
+                        <span>Confirm Payment</span>
+                      </button>
+                    </li>
+                    <br />
+                  </ul>
+                </div>
+              </div>
+              <!--inner-->
+            </div>
+          </form>
+        </div>
+
+        <!--cart-collaterals-->
+      </div>
+    </div>
+  </div>
+</section>

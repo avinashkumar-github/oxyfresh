@@ -1,0 +1,163 @@
+<!-- Header -->
+<header>
+  <div class="header-container">
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <!-- Header Language -->
+          <div class="col-lg-5 col-md-5 col-xs-2 col-sm-5">
+            <nav>
+              <div class="mm-toggle-wrap">
+                <div class="mm-toggle">
+                  <i class="fa fa-reorder"></i
+                  ><span class="mm-label">Menu</span>
+                </div>
+              </div>
+
+              <ul id="nav" class="hidden-xs menu-item menu-item-left">
+                <% if(session.category){ for(let menu of session.category){ %>
+                <li>
+                  <a href="/product/<%=menu.slug%>" class="level-top"
+                    ><span><%= menu.name %></span></a
+                  >
+                </li>
+                <%} } %>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-8 col-sm-2 logo">
+            <a title="Oxyfresh" href="/"
+              ><img alt="Oxyfresh" src="/images/logo.png"
+            /></a>
+          </div>
+
+          <div class="col-lg-5 col-md-5 col-xs-2 col-sm-5 right-col">
+            <div class="top-cart-contain pull-right">
+              <!-- Top Cart -->
+              <div class="mini-cart">
+                <div class="basket">
+                  <a title="View Cart" href="/cart/view"
+                    ><i class="fa fa-shopping-bag"></i>
+                  </a>
+                </div>
+                <div></div>
+              </div>
+              <!-- Top Cart -->
+              <div id="ajaxconfig_info" style="display: none">
+                <a href="#/"></a>
+                <input value="" type="hidden" />
+                <input id="enable_module" value="1" type="hidden" />
+                <input class="effect_to_cart" value="1" type="hidden" />
+                <input
+                  class="title_shopping_cart"
+                  value="Go to shopping cart"
+                  type="hidden"
+                />
+              </div>
+            </div>
+
+            <div class="top-search">
+              <div class="block-icon pull-right">
+                <a
+                  data-target=".bs-example-modal-lg"
+                  data-toggle="modal"
+                  class="search-focus dropdown-toggle links"
+                >
+                  <i class="fa fa-search"></i>
+                </a>
+                <div
+                  class="modal fade bs-example-modal-lg"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          aria-label="Close"
+                          data-dismiss="modal"
+                          class="close"
+                          type="button"
+                        >
+                          <img
+                            src="/images/interstitial-close.png"
+                            alt="close"
+                          />
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="navbar-form">
+                          <div id="search">
+                            <div class="input-group">
+                              <input
+                                name="search"
+                                placeholder="Search"
+                                class="form-control"
+                                type="text"
+                              />
+                              <button type="button" class="btn-search">
+                                <i class="fa fa-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <% if(user) {%>
+            <div class="block-language-wrapper hidden-xs">
+              <a
+                role="button"
+                data-toggle="dropdown"
+                data-target="#"
+                class="block-language dropdown-toggle"
+                href="#"
+              >
+                <img src="/images/english.png" alt="language" /> Hello, Avinash
+              </a>
+            </div>
+            <% } %>
+
+            <span class="o-divider--v h6 bg-c-theme"></span>
+
+            <!-- Header Top Links -->
+            <div class="toplinks">
+              <div class="links">
+                <!-- Header Company -->
+
+                <!-- End Header Company -->
+                <% if(!user) { %>
+                <div class="login">
+                  <a href="/user/login"
+                    ><span class="hidden-xs">Log In</span></a
+                  >
+                </div>
+                <% }else{ %>
+                <div class="myaccount">
+                  <a title="Dashboard" href="/user/dashboard"
+                    ><span class="hidden-xs">Dashboard</span></a
+                  >
+                </div>
+                <div class="login">
+                  <a href="/user/logout"
+                    ><span class="hidden-xs">Log Out</span></a
+                  >
+                </div>
+                <%} %>
+              </div>
+            </div>
+
+            <!-- End Header Top Links -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->

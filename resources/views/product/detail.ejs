@@ -1,0 +1,215 @@
+<section class="main-container col1-layout wow bounceInUp animated">
+  <div class="main container">
+    <div class="col-main">
+      <div class="row">
+        <div class="product-view">
+          <div class="product-next-prev">
+            <a class="product-next" href="#"><span></span></a>
+            <a class="product-prev" href="#"><span></span></a>
+          </div>
+          <div class="product-essential">
+            <input name="form_key" value="6UbXroakyQlbfQzK" type="hidden" />
+            <div class="product-img-box col-sm-4 col-xs-12">
+              <div class="new-label new-top-left">New</div>
+              <div class="product-image">
+                <div class="large-image">
+                  <a href="/<%=product.image%>" class="cloud-zoom" id="zoom1">
+                    <img src="/<%=product.image%>" alt="<%=product.name%>" />
+                  </a>
+                </div>
+                <div class="flexslider flexslider-thumb">
+                  <ul class="previews-list slides">
+                    <li>
+                      <a
+                        href="/products-images/p6.jpg"
+                        class="cloud-zoom-gallery"
+                        rel="useZoom: 'zoom1', smallImage: '/products-images/p6.jpg' "
+                        ><img src="/products-images/p6.jpg" alt="Thumbnail 1"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="/products-images/p10.jpg"
+                        class="cloud-zoom-gallery"
+                        rel="useZoom: 'zoom1', smallImage: '/products-images/p10.jpg' "
+                        ><img src="/products-images/p10.jpg" alt="Thumbnail 2"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="/products-images/p3.jpg"
+                        class="cloud-zoom-gallery"
+                        rel="useZoom: 'zoom1', smallImage: '/products-images/p3.jpg' "
+                        ><img src="/products-images/p3.jpg" alt="Thumbnail 1"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="/products-images/p4.jpg"
+                        class="cloud-zoom-gallery"
+                        rel="useZoom: 'zoom1', smallImage: '/products-images/p4.jpg' "
+                        ><img src="/products-images/p4.jpg" alt="Thumbnail 2"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="/products-images/p5.jpg"
+                        class="cloud-zoom-gallery"
+                        rel="useZoom: 'zoom1', smallImage: '/products-images/p5.jpg' "
+                        ><img src="/products-images/p5.jpg" alt="Thumbnail 2"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="/products-images/p8.jpg"
+                        class="cloud-zoom-gallery"
+                        rel="useZoom: 'zoom1', smallImage: '/products-images/p8.jpg' "
+                        ><img src="/products-images/p8.jpg" alt="Thumbnail 2"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="/products-images/p10.jpg"
+                        class="cloud-zoom-gallery"
+                        rel="useZoom: 'zoom1', smallImage: '/products-images/p10.jpg' "
+                        ><img src="/products-images/p10.jpg" alt="Thumbnail 2"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- end: more-images -->
+            </div>
+            <div class="product-shop col-sm-8 col-xs-12">
+              <div class="product-name">
+                <h1><%=product.name%></h1>
+              </div>
+              <div class="ratings">
+                <div class="rating-box">
+                  <div style="width: 60%" class="rating"></div>
+                </div>
+                <p class="rating-links">
+                  <a href="#">1 Review(s)</a>
+                  <span class="separator">|</span>
+                  <a href="#">Add Your Review</a>
+                </p>
+              </div>
+              <div class="price-block">
+                <div class="price-box">
+                  <p class="special-price">
+                    <span class="price-label">Special Price</span>
+                    <span id="product-price-48" class="price">
+                      ₹<%=product.price%>
+                    </span>
+                  </p>
+                  <p class="old-price">
+                    <span class="price-label">Regular Price:</span>
+                    <span class="price"> ₹<%=product.price%> </span>
+                  </p>
+                </div>
+                <p class="availability in-stock pull-right">
+                  <span>In Stock</span>
+                </p>
+              </div>
+              <div class="short-description">
+                <h2>Quick Overview</h2>
+                <p><%=product.description%></p>
+              </div>
+              <div class="add-to-box">
+                <div class="add-to-cart">
+                  <form action="#" method="POST" id="product_addtocart_form">
+                    <div class="pull-left">
+                      <div class="custom pull-left">
+                        <button
+                          onClick="var result = document.getElementById('qty'); var qty = result.value;if(qty == 1) return false;if( !isNaN( qty ) ) result.value--;return false;"
+                          class="reduced items-count"
+                          type="button"
+                        >
+                          <i class="fa fa-minus">&nbsp;</i>
+                        </button>
+                        <input
+                          type="text"
+                          class="input-text qty"
+                          title="Qty"
+                          value="1"
+                          maxlength="12"
+                          min="1"
+                          id="qty"
+                          name="qty"
+                        />
+                        <button
+                          onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;"
+                          class="increase items-count"
+                          type="button"
+                        >
+                          <i class="fa fa-plus">&nbsp;</i>
+                        </button>
+                      </div>
+                    </div>
+                    <input
+                      name="product"
+                      type="hidden"
+                      value="<%=JSON.stringify(product)%>"
+                    />
+                    <button
+                      class="button btn-cart"
+                      title="Add to Cart"
+                      type="submit"
+                    >
+                      <span>Add to Cart</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="
+              product-collateral
+              col-lg-12 col-sm-12 col-xs-12
+              bounceInUp
+              animated
+            "
+          >
+            <div class="add_info">
+              <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
+                <li class="active">
+                  <a href="#product_tabs_description" data-toggle="tab">
+                    Product Description
+                  </a>
+                </li>
+              </ul>
+              <div id="productTabContent" class="tab-content">
+                <div
+                  class="tab-pane fade in active"
+                  id="product_tabs_description"
+                >
+                  <div class="std">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nam fringilla augue nec est tristique auctor. Donec non
+                      est at libero vulputate rutrum. Morbi ornare lectus quis
+                      justo gravida semper. Nulla tellus mi, vulputate
+                      adipiscing cursus eu, suscipit id nulla. Donec a neque
+                      libero. Pellentesque aliquet, sem eget laoreet ultrices,
+                      ipsum metus feugiat sem, quis fermentum turpis eros eget
+                      velit.
+                    </p>
+                    <p>
+                      Nunc facilisis sagittis ullamcorper. Proin lectus ipsum,
+                      gravida et mattis vulputate, tristique ut lectus. Sed et
+                      lorem nunc. Vestibulum ante ipsum primis in faucibus orci
+                      luctus et ultrices posuere cubilia Curae; Aenean eleifend
+                      laoreet congue. Vivamus adipiscing nisl ut dolor dignissim
+                      semper.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

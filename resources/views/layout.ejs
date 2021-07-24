@@ -1,0 +1,38 @@
+
+ <%- include('./partials/head'); %>
+  <body class="cms-index-index index">
+    <div id="page">
+      
+      <%- include("./partials/header.ejs"); %>
+      
+      <%- body %>
+
+      
+
+      <!-- Latest Blog -->
+      <%- include("./partials/blog.ejs"); %>
+      <!-- End Latest Blog -->
+      <%#- include("./partials/brand-logo.ejs"); %>
+      <%#- include("./partials/extra-benefit.ejs"); %>
+      
+
+      
+
+      <!-- Footer -->
+      <%- include("./partials/footer.ejs"); %>
+      <!-- footer end -->
+    </div>
+    
+
+    <%- include("./partials/mobile-menu.ejs"); %>
+
+    <!-- End Footer -->
+    
+    <!-- JavaScript -->
+    <%- include("./partials/script.ejs"); %>
+    <!-- JavaScript end -->
+    <script type="module" src="/js/app.js"></script>
+   
+    
+  </body>
+</html>

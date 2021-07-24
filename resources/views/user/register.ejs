@@ -1,0 +1,97 @@
+<!-- Main Container -->
+<section class="main-container col1-layout bounceInUp animated">
+  <div class="main container">
+    <div class="account-login">
+      <fieldset class="col2-set">
+        <legend>Login or Create an Account</legend>
+        <div class="col-1 new-users">
+          <strong>New Customers</strong>
+          <div class="content">
+            <form method="POST" action="/user/register">
+              <p>If you have an account with us, please log in.</p>
+
+              <ul class="form-list">
+                <li>
+                  <label for="name">Name <span class="required">*</span></label>
+                  <br />
+                  <input
+                    type="text"
+                    title=""
+                    class="input-text"
+                    id="name"
+                    value="<%= messages.name%>"
+                    name="name"
+                  />
+                </li>
+                <li>
+                  <label for="mobile"
+                    >Mobile <span class="required">*</span></label
+                  >
+                  <br />
+                  <input
+                    type="text"
+                    title=""
+                    class="input-text"
+                    id="mobile"
+                    value="<%= messages.mobile%>"
+                    name="mobile"
+                  />
+                </li>
+                <li>
+                  <label for="email"
+                    >Email Address <span class="required">*</span></label
+                  >
+                  <br />
+                  <input
+                    type="text"
+                    title=""
+                    class="input-text"
+                    id="email"
+                    value="<%= messages.email%>"
+                    name="email"
+                  />
+                </li>
+                <li>
+                  <label for="pass"
+                    >Password <span class="required">*</span></label
+                  >
+                  <br />
+                  <input
+                    type="password"
+                    title=""
+                    id="pass"
+                    class="input-text"
+                    name="password"
+                  />
+                </li>
+              </ul>
+              <% if(messages.error){ %>
+              <p class="required">* <%= messages.error%></p>
+              <% }else if(messages.success) {%>
+              <p class="success-msg user-success-msg"><%= messages.success%></p>
+              <% } %>
+
+              <p>
+                By creating an account with our store, you will be able to move
+                through the checkout process faster, store multiple shipping
+                addresses, view and track your orders in your account and more.
+              </p>
+              <div class="buttons-set">
+                <button class="button create-account">
+                  <span>Create an Account</span>
+                </button>
+                <a class="forgot-word" href="/user/login">Log In</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+</section>
+<!-- Main Container End -->

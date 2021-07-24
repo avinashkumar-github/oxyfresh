@@ -1,0 +1,69 @@
+<!-- Main Container -->
+<section class="main-container col1-layout bounceInUp animated">
+  <div class="main container">
+    <div class="account-login">
+      <fieldset class="col2-set">
+        <legend>Login or Create an Account</legend>
+
+        <div class="col-1 registered-users">
+          <strong>Registered Customers</strong>
+          <div class="content">
+            <p>If you have an account with us, please log in.</p>
+            <form method="POST" action="/user/login">
+              <ul class="form-list">
+                <li>
+                  <label for="email"
+                    >Email Address <span class="required">*</span></label
+                  >
+                  <br />
+                  <input
+                    type="text"
+                    title=""
+                    class="input-text"
+                    id="email"
+                    value=""
+                    name="email"
+                  />
+                </li>
+                <li>
+                  <label for="pass"
+                    >Password <span class="required">*</span></label
+                  >
+                  <br />
+                  <input
+                    type="password"
+                    title=""
+                    id="pass"
+                    class="input-text"
+                    name="password"
+                  />
+                </li>
+              </ul>
+              <%if(messages.error){ %>
+              <p id="user-error-msg" class="error-msg"><%= messages.error%></p>
+              <% }else if(messages.success) {%>
+              <p class="success-msg user-success-msg"><%= messages.success%></p>
+              <% } %>
+              <div class="buttons-set">
+                <button id="send2" name="" type="submit" class="button login">
+                  <span>Login</span>
+                </button>
+                <a class="forgot-word" href="/user/forgot_password"
+                  >Forgot Your Password?</a
+                >
+                |
+                <a class="forgot-word" href="/user/register">New User</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+</section>
+<!-- Main Container End -->

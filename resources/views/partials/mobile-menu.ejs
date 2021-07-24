@@ -1,0 +1,56 @@
+<div id="mobile-menu">
+  <ul>
+    <li>
+      <div class="mm-search">
+        <form id="search_mob" name="search">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            <input
+              type="text"
+              class="form-control simple"
+              placeholder="Search ..."
+              name="srch-term"
+              id="srch-term"
+            />
+          </div>
+        </form>
+      </div>
+    </li>
+    <% if(session.category){ for(let menu of session.category){ %>
+    <li>
+      <a href="/product/<%=menu.slug%>"><%= menu.name %></a>
+    </li>
+    <%} } %>
+  </ul>
+  <div class="dropdown block-language-wrapper">
+    <ul>
+      <li role="presentation">
+        <a role="menuitem" tabindex="-1" href="#"
+          ><img src="/images/english.png" alt="language" /> 9894948763
+        </a>
+      </li>
+      <li role="presentation">
+        <a role="menuitem" tabindex="-1" href="#"
+          ><img src="/images/francais.png" alt="language" /> info@oxyfresh.co.in
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- <div class="dropdown block-currency-wrapper">
+    <ul>
+      <li role="presentation">
+        <a role="menuitem" tabindex="-1" href="#"> $ - Dollar </a>
+      </li>
+      <li role="presentation">
+        <a role="menuitem" tabindex="-1" href="#"> £ - Pound </a>
+      </li>
+      <li role="presentation">
+        <a role="menuitem" tabindex="-1" href="#"> € - Euro </a>
+      </li>
+    </ul>
+  </div> -->
+</div>

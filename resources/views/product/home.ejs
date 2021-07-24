@@ -1,0 +1,204 @@
+<!-- <div class="page-title">
+  <h1><%=title%> Collection</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue
+    nec est tristique auctor.
+  </p>
+</div> -->
+<section class="main-container col2-left-layout bounceInUp animated">
+  <div class="container">
+    <div class="row">
+      <div class="col-main col-sm-push-3">
+        <!-- col-sm-9 -->
+        <div class="category-description std">
+          <div class="slider-items-products">
+            <div
+              id="category-desc-slider"
+              class="product-flexslider hidden-buttons"
+            >
+              <div
+                class="slider-items slider-width-col1 owl-carousel owl-theme"
+              >
+                <!-- Item -->
+                <div class="item">
+                  <a href="#"><img alt="" src="/images/<%=title%>.jpg" /></a>
+                  <div class="cat-img-title cat-bg cat-box">
+                    <div class="small-tag">
+                      <span>Hot Sale</span> On Best Products
+                    </div>
+                    <h2 class="cat-heading"><%=title%> Collection</h2>
+                    <p>
+                      <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. -->
+                    </p>
+                  </div>
+                </div>
+                <!-- End Item -->
+
+                <!-- Item -->
+                <div class="item">
+                  <a href="#"><img alt="" src="images/category-img2.jpg" /></a>
+
+                  <!-- End Item -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <article class="col-main">
+          <div class="toolbar">
+            <!-- <div class="sorter">
+              <div class="view-mode">
+                <span title="Grid" class="button button-active button-grid"
+                  >&nbsp;</span
+                ><a href="list.html" title="List" class="button-list">&nbsp;</a>
+              </div>
+            </div>
+            <div id="sort-by">
+              <label class="left">Sort By: </label>
+              <ul>
+                <li>
+                  <a href="#">Position<span class="right-arrow"></span></a>
+                  <ul>
+                    <li><a href="#">Name</a></li>
+                    <li><a href="#">Price</a></li>
+                    <li><a href="#">Position</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <a
+                class="button-asc left"
+                href="#"
+                title="Set Descending Direction"
+                ><span class="top_arrow"></span
+              ></a>
+            </div>
+            <div class="pager">
+              <div id="limiter">
+                <label>View: </label>
+                <ul>
+                  <li>
+                    <a href="#">15<span class="right-arrow"></span></a>
+                    <ul>
+                      <li><a href="#">20</a></li>
+                      <li><a href="#">30</a></li>
+                      <li><a href="#">35</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="pages">
+                <label>Page:</label>
+                <ul class="pagination">
+                  <li><a href="#">&laquo;</a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">&raquo;</a></li>
+                </ul>
+              </div>
+            </div> -->
+          </div>
+          <div class="category-products">
+            <ul class="products-grid">
+              <% if(products) { for(let product of products) { %>
+              <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
+                <div class="item-inner">
+                  <div class="item-img">
+                    <div class="item-img-info">
+                      <a
+                        href="/product/<%= product.categoryId.slug %>/<%= product._id %>"
+                        title="<%=product.name%>"
+                        class="product-image"
+                        ><img src="/<%=product.image%>" alt="<%=product.name%>"
+                      /></a>
+                      <div class="new-label new-top-left">New</div>
+                      <div class="actions">
+                        <div class="quick-view-btn">
+                          <a
+                            href="#"
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title=""
+                            data-original-title="Quick View"
+                          >
+                            <span>Quick View</span></a
+                          >
+                        </div>
+                        <div class="link-wishlist">
+                          <a
+                            href="#"
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title=""
+                            data-original-title="Wishlist"
+                            ><span>Add to Wishlist</span></a
+                          >
+                        </div>
+                        <div class="link-compare">
+                          <a
+                            href="#"
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title=""
+                            data-original-title="Compare"
+                            ><span>Add to Compare</span></a
+                          >
+                        </div>
+                        <div class="add_cart">
+                          <button
+                            data-product="<%= JSON.stringify(product) %>"
+                            class="button btn-cart add-to-cart"
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title=""
+                            data-original-title="Add to Cart"
+                          >
+                            <span>Add to Cart</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="rating">
+                        <div class="ratings">
+                          <div class="rating-box">
+                            <div class="rating" style="width: 80%"></div>
+                          </div>
+                          <p class="rating-links">
+                            <a href="#">1 Review(s)</a>
+                            <span class="separator">|</span>
+                            <a href="#">Add Review</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-info">
+                    <div class="info-inner">
+                      <div class="item-title">
+                        <a href="#" title="<%=product.name%>"
+                          ><%=product.name%></a
+                        >
+                      </div>
+                      <div class="item-content">
+                        <div class="item-price">
+                          <div class="price-box">
+                            <span class="regular-price"
+                              ><span class="price">₹<%=product.price%></span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <% } }%>
+            </ul>
+          </div>
+        </article>
+        <!--	///*///======    End article  ========= //*/// -->
+      </div>
+    </div>
+  </div>
+</section>
