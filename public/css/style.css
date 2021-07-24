@@ -1,42 +1,6 @@
-/*
-Theme Name: Datsun
-Author: ThemesGround
-Description:  Datsun HTML Template
-Version: 1.4
-License: GNU General Public License v2 or later
-Tags: two-columns, left-sidebar, fixed-layout, responsive-layout, custom-background, custom-colors, custom-header, custom-menu
-Text Domain:  Datsun
-*/
-/* TABLE OF CONTENTS
-
-1.   Body
-2.   Layout
-3.   Header
-4.   Navigation
-5.   Features Box
-6.   Top Banner Section	
-7.   Home page Sliders
-8.   Home Products Tab
-9.   Products Grid 
-10.  Products List
-11.  Rating and Price
-12.  Latest-Blog
-13.  Breadcrumbs
-14.  Sidebar
-15.  Product Sorting Toolbar  
-16.  Product View
-17.  Global Messages
-18.  Footer
-
-19.  Responsive
-
-/* */
-
-/*----------- 1. Body --------------*/
-
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 13px;
+  font-size: 10px;
   color: #333;
   padding: 30px;
   border-top: 5px #bb9f6c solid;
